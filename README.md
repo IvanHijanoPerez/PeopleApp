@@ -1,34 +1,39 @@
 # People App
 
-<p align="center">
-<img align="center" width="300" alt="portfolio_view" src="./docs/logo.png">
-</p>
-
 ## Description:
 
-Android application developed in the Kotlin language. The application shows the characters of Breaking Bad (https://breakingbadapi.com/) in a list and when you click on a specific character, a new page opens with more details about the chosen character.
+Android application developed in the Kotlin language. It consists in a CRUD (Create, Read, Update, Delete) of people. The data will be stored locally. 
+The main page shows the list of people created.
+To create a person it is necessary to press the bottom button and give name, lastname and age in the fields.
+Clicking the pencil button on each person will let edit that person information.
+To delete a person just click the trash can button.
 
 ## Features:
 
-- Retrofit
+- Room
 - Jetpack Compose
 - Jetpack Viewmodel
 - MVVM
 - Clean Architecture
 - Coroutines
 - Dagger Hilt
-- Coil
 
 # Screens
 
-## List of characters
+## List of people
 
 <p align="center">
 <img align="center" width="300" alt="portfolio_view" src="./docs/list.png">
 </p>
 
-## Character information
+## Add person
 
 <p align="center">
-<img align="center" width="300" alt="portfolio_view" src="./docs/character.png">
+<img align="center" width="300" alt="portfolio_view" src="./docs/add.png">
+</p>
+
+## Edit person
+
+<p align="center">
+<img align="center" width="300" alt="portfolio_view" src="./docs/edit.png">
 </p>
