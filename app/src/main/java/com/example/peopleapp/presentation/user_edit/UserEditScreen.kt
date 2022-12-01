@@ -1,7 +1,6 @@
 package com.example.peopleapp.presentation.user_edit
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.layout.R
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect

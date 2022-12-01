@@ -8,8 +8,6 @@ import androidx.lifecycle.viewModelScope
 import com.example.peopleapp.domain.model.User
 import com.example.peopleapp.domain.use_case.get_user.GetUserUseCase
 import com.example.peopleapp.domain.use_case.insert_user.InsertUserUseCase
-import com.example.peopleapp.presentation.user_list.UserListEvent
-import com.example.peopleapp.presentation.user_list.UserListState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
@@ -52,13 +50,25 @@ class UserEditViewModel @Inject constructor(
     fun onEvent(event: UserEditEvent) {
         when (event) {
             is UserEditEvent.EnteredName -> {
-                _state.value = state.value.copy(name= event.name, lastName = state.value.lastName, age = state.value.age)
+                _state.value = state.value.copy(
+                    name = event.name,
+                    lastName = state.value.lastName,
+                    age = state.value.age
+                )
             }
             is UserEditEvent.EnteredLastName -> {
-                _state.value = state.value.copy(name= state.value.name, lastName = event.lastName, age = state.value.age)
+                _state.value = state.value.copy(
+                    name = state.value.name,
+                    lastName = event.lastName,
+                    age = state.value.age
+                )
             }
             is UserEditEvent.EnteredAge -> {
-                _state.value = state.value.copy(name= state.value.name, lastName = state.value.lastName, age = event.age)
+                _state.value = state.value.copy(
+                    name = state.value.name,
+                    lastName = state.value.lastName,
+                    age = event.age
+                )
             }
             is UserEditEvent.InsertUser -> {
                 viewModelScope.launch {
@@ -77,7 +87,7 @@ class UserEditViewModel @Inject constructor(
     }
 
     sealed class UiEvent {
-        object SaveUser: UiEvent()
+        object SaveUser : UiEvent()
     }
 
 }
